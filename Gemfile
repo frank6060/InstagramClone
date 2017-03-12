@@ -6,6 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'simple_form'
+gem 'devise'
 gem 'bootstrap-sass'
 gem 'haml'
 gem 'coffee-script-source', '1.8.0'
