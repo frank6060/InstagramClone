@@ -1,0 +1,18 @@
+<%= simple_form_for @pic, html:{multipart: true} do |f| %>
+  <% if @pic.errors.any? %>
+    <div id="errors">
+    	<h2>
+    		<%= pluralize(@pic.errors.count, "error") %>
+    		<ul>
+    			<% @pic.errors.full_message.each do |msg| %>
+    			<li><%= msg %></li>
+    			<% end -%>
+    		</ul>
+    	</h2>
+    </div>
+    <% end -%>
+
+  <%= f.input :title, input_html: { class: 'form_control' } %>
+  <%= f.input :description, input_html: { class: 'form_control' } %>
+  <%= f.button :submit, class: "btn btnm-info" %>
+<% end %>
